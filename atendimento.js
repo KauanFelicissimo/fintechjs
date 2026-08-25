@@ -30,12 +30,7 @@ function atenderCliente(){
     } else {
         alert("A fila está vazia");
     }
-    if(fila.length > 0){
-       opcao = confirm("Deseja atender o prróximo cliente");
-       if (opcao == true){
-        atenderCliente();
-    } 
-    }
+    atenderProximoCliente();
     
     
 }
@@ -43,5 +38,14 @@ function atenderCliente(){
 function exibirFila(){
     if(fila.length > 0){
     alert(fila);
+    }
+}
+
+function atenderProximoCliente(){
+    if(fila.length > 0){
+       opcao = confirm("Deseja atender o prróximo cliente");
+       if (opcao == true){
+        atenderCliente();
+    } 
     }
 }
